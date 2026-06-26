@@ -1,0 +1,60 @@
+### FireGuard AI Bolivia — pruebas de la API
+### (VS Code: instala la extensión "REST Client" y dale a "Send Request")
+
+@host = http://localhost:3000
+
+### Health
+GET {{host}}/health
+
+### Índice de la API
+GET {{host}}/api
+
+### 1) Ingesta de focos reales de NASA FIRMS (correr primero)
+POST {{host}}/api/fires/ingest
+Content-Type: application/json
+
+{ "limit": 15 }
+
+### 2) Lista de focos (filtros opcionales)
+GET {{host}}/api/fires?limit=10
+
+### Solo riesgo ALTO
+GET {{host}}/api/fires?nivel=ALTO
+
+### Dataset de contexto boliviano
+GET {{host}}/api/fires/zonas
+
+### 3) Priorización Gemini — orden de ataque (el "wow")
+POST {{host}}/api/ai/prioritize
+Content-Type: application/json
+
+{ "limit": 5 }
+
+### 4) Análisis de un foco arbitrario (sin necesidad de ingest)
+POST {{host}}/api/ai/analyze
+Content-Type: application/json
+
+{
+  "fire": {
+    "lat": -16.45, "lng": -61.85, "frp": 84.2,
+    "confianza": "alta", "acq_date": "2026-06-25", "dia_noche": "dia"
+  }
+}
+
+### --- Para los siguientes, copia un id real de GET /api/fires ---
+@fireId = PEGA_UN_ID_AQUI
+
+### 5) Análisis de un foco cacheado
+POST {{host}}/api/ai/analyze/{{fireId}}
+
+### 6) Chat IA sobre el foco
+POST {{host}}/api/ai/chat/{{fireId}}
+Content-Type: application/json
+
+{ "pregunta": "¿Cuántos brigadistas necesito y qué equipo llevo?" }
+
+### 7) Confirmación del brigadista
+POST {{host}}/api/fires/{{fireId}}/confirm
+Content-Type: application/json
+
+{ "estado": "confirmado", "nota": "Fuego activo, viento NE", "brigadista": "Unidad 3" }

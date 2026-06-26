@@ -1,0 +1,8 @@
+[
+  { "id": "seed_chiquitania_1", "lat": -16.45, "lng": -61.85, "frp": 84.2, "brillo_k": 348.5, "confianza": "alta", "satelite": "N", "instrumento": "VIIRS", "acq_date": "2026-06-25", "acq_time": "1742", "dia_noche": "dia", "fuente": "seed" },
+  { "id": "seed_robore_1", "lat": -18.21, "lng": -59.83, "frp": 41.6, "brillo_k": 332.1, "confianza": "nominal", "satelite": "N", "instrumento": "VIIRS", "acq_date": "2026-06-25", "acq_time": "1742", "dia_noche": "dia", "fuente": "seed" },
+  { "id": "seed_sanmatias_1", "lat": -16.31, "lng": -58.55, "frp": 112.7, "brillo_k": 360.3, "confianza": "alta", "satelite": "N", "instrumento": "VIIRS", "acq_date": "2026-06-25", "acq_time": "0218", "dia_noche": "noche", "fuente": "seed" },
+  { "id": "seed_noelkempff_1", "lat": -14.72, "lng": -60.69, "frp": 67.9, "brillo_k": 341.0, "confianza": "alta", "satelite": "N", "instrumento": "VIIRS", "acq_date": "2026-06-24", "acq_time": "1730", "dia_noche": "dia", "fuente": "seed" },
+  { "id": "seed_concepcion_1", "lat": -16.05, "lng": -62.10, "frp": 28.3, "brillo_k": 325.8, "confianza": "nominal", "satelite": "N", "instrumento": "VIIRS", "acq_date": "2026-06-25", "acq_time": "1736", "dia_noche": "dia", "fuente": "seed" },
+  { "id": "seed_charagua_1", "lat": -19.71, "lng": -62.95, "frp": 53.4, "brillo_k": 337.2, "confianza": "alta", "satelite": "N", "instrumento": "VIIRS", "acq_date": "2026-06-25", "acq_time": "1748", "dia_noche": "dia", "fuente": "seed" }
+]

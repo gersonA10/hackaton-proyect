@@ -1,19 +1,29 @@
 {
-  "name": "hackaton-proyect",
+  "name": "fireguard-ai-bolivia",
   "version": "0.1.0",
-  "description": "Proyecto base de hackathon",
+  "description": "FireGuard AI Bolivia — capa de inteligencia boliviana sobre datos satelitales de incendios (NASA FIRMS + Gemini)",
   "type": "module",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
     "dev": "node --watch src/index.js",
+    "ingest": "node scripts/ingest.js",
     "test": "node --test"
   },
-  "keywords": [],
+  "keywords": [
+    "incendios",
+    "bolivia",
+    "nasa-firms",
+    "gemini",
+    "hackathon"
+  ],
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@google/genai": "^2.10.0",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.5",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "firebase-admin": "^14.1.0"
   }
 }
